@@ -1,0 +1,143 @@
+{
+  "name": "bueroalerta/react",
+  "version": "0.1.4",
+  "libraries": {
+    "xv": "^1.1.25"
+  },
+  "title": "xxx",
+  "branch": "",
+  "style": {
+    "name": "Default",
+    "componentSet": {
+      "nav": "nav/BasicNav",
+      "header": "header/BannerHeader",
+      "article": "article/BasicArticle",
+      "footer": "footer/BasicFooter"
+    },
+    "fontFamily": "-apple-system, BlinkMacSystemFont, sans-serif",
+    "fontWeight": 400,
+    "bold": 600,
+    "lineHeight": 1.5,
+    "typeScale": [
+      72,
+      48,
+      24,
+      20,
+      16,
+      14,
+      12
+    ],
+    "monospace": "Menlo, monospace",
+    "heading": {
+      "fontFamily": null,
+      "fontStyle": null,
+      "fontWeight": 600,
+      "lineHeight": 1.25,
+      "textTransform": null,
+      "letterSpacing": null
+    },
+    "h0": {},
+    "h1": {},
+    "h2": {},
+    "h3": {},
+    "h4": {},
+    "h5": {},
+    "h6": {},
+    "alternativeText": {},
+    "space": [
+      0,
+      8,
+      16,
+      32,
+      48,
+      64,
+      96
+    ],
+    "layout": {
+      "maxWidth": 1024,
+      "centered": false
+    },
+    "colors": {
+      "text": "#111",
+      "background": "#fff",
+      "primary": "#08e",
+      "secondary": "#059",
+      "highlight": "#e08",
+      "border": "#ddd",
+      "muted": "#eee"
+    },
+    "border": {
+      "width": 1,
+      "radius": 2
+    },
+    "link": {},
+    "button": {
+      "hover": {
+        "boxShadow": "inset 0 0 0 999px rgba(0, 0, 0, .125)"
+      }
+    },
+    "input": {},
+    "body": {
+      "margin": 0
+    },
+    "breakpoints": {
+      "xs": "@media screen and (max-width:40em)",
+      "sm": "@media screen and (min-width:40em)",
+      "md": "@media screen and (min-width:52em)",
+      "lg": "@media screen and (min-width:64em)"
+    }
+  },
+  "content": [
+    {
+      "component": "nav",
+      "links": [
+        {
+          "href": "https://reactjs.org",
+          "text": "Home"
+        },
+        {
+          "href": "https://github.com/bueroalerta/react",
+          "text": "GitHub"
+        }
+      ]
+    },
+    {
+      "component": "header",
+      "heading": "react",
+      "subhead": "A declarative, efficient, and flexible JavaScript library for building user interfaces.",
+      "children": [
+        {
+          "component": "ui/TweetButton",
+          "text": "react: A declarative, efficient, and flexible JavaScript library for building user interfaces.",
+          "url": "https://reactjs.org"
+        },
+        {
+          "component": "ui/GithubButton",
+          "user": "bueroalerta",
+          "repo": "react"
+        }
+      ],
+      "text": "v16.0.0"
+    },
+    {
+      "component": "article",
+      "metadata": {
+        "source": "github.readme"
+      },
+      "html": "<h1><a href=\"https://reactjs.org/\">React</a> &#xB7; <a href=\"https://circleci.com/gh/facebook/react\"><img src=\"https://circleci.com/gh/facebook/react.svg?style=shield&amp;circle-token=:circle-token\"></a> <a href=\"https://coveralls.io/github/facebook/react?branch=master\"><img src=\"https://img.shields.io/coveralls/facebook/react/master.svg?style=flat\"></a> <a href=\"https://www.npmjs.com/package/react\"><img src=\"https://img.shields.io/npm/v/react.svg?style=flat\"></a> <a href=\"CONTRIBUTING.md#pull-requests\"><img src=\"https://img.shields.io/badge/PRs-welcome-brightgreen.svg\"></a></h1>\n<p>React is a JavaScript library for building user interfaces.</p>\n<ul>\n<li><strong>Declarative:</strong> React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes. Declarative views make your code more predictable, simpler to understand, and easier to debug.</li>\n<li><strong>Component-Based:</strong> Build encapsulated components that manage their own state, then compose them to make complex UIs. Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep state out of the DOM.</li>\n<li><strong>Learn Once, Write Anywhere:</strong> We don&apos;t make assumptions about the rest of your technology stack, so you can develop new features in React without rewriting existing code. React can also render on the server using Node and power mobile apps using <a href=\"https://facebook.github.io/react-native/\">React Native</a>.</li>\n</ul>\n<p><a href=\"https://reactjs.org/docs/getting-started.html\">Learn how to use React in your own project</a>.</p>\n<h2>Examples</h2>\n<p>We have several examples <a href=\"https://reactjs.org/\">on the website</a>. Here is the first one to get you started:</p>\n<pre><span class=\"hljs-class\"><span class=\"hljs-keyword\">class</span> <span class=\"hljs-title\">HelloMessage</span> <span class=\"hljs-keyword\">extends</span> <span class=\"hljs-title\">React</span>.<span class=\"hljs-title\">Component</span> </span>{\n  render() {\n    <span class=\"hljs-keyword\">return</span> <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span>&gt;</span>Hello {this.props.name}<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span></span>;\n  }\n}\n\nReactDOM.render(\n  <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">HelloMessage</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">&quot;John&quot;</span> /&gt;</span>,\n  document.getElementById(&apos;container&apos;)\n);</span></pre><p>This example will render &quot;Hello John&quot; into a container on the page.</p>\n<p>You&apos;ll notice that we used an HTML-like syntax; <a href=\"https://reactjs.org/docs/introducing-jsx.html\">we call it JSX</a>. JSX is not required to use React, but it makes code more readable, and writing it feels like writing HTML. We recommend using <a href=\"https://babeljs.io/\">Babel</a> with a <a href=\"https://babeljs.io/docs/plugins/preset-react/\">React preset</a> to convert JSX into native JavaScript for browsers to digest.</p>\n<h2>Installation</h2>\n<p>React is available as the <code>react</code> package on <a href=\"https://www.npmjs.com/\">npm</a>. It is also available on a <a href=\"https://reactjs.org/docs/installation.html#using-a-cdn\">CDN</a>.</p>\n<p>React is flexible and can be used in a variety of projects. You can create new apps with it, but you can also gradually introduce it into an existing codebase without doing a rewrite.</p>\n<p>The recommended way to install React depends on your project. Here you can find short guides for the most common scenarios:</p>\n<ul>\n<li><a href=\"https://reactjs.org/docs/installation.html#trying-out-react\">Trying Out React</a></li>\n<li><a href=\"https://reactjs.org/docs/installation.html#creating-a-new-application\">Creating a New Application</a></li>\n<li><a href=\"https://reactjs.org/docs/installation.html#adding-react-to-an-existing-application\">Adding React to an Existing Application</a></li>\n</ul>\n<h2>Contributing</h2>\n<p>The main purpose of this repository is to continue to evolve React core, making it faster and easier to use. Development of React happens in the open on GitHub, and we are grateful to the community for contributing bugfixes and improvements. Read below to learn how you can take part in improving React.</p>\n<h3><a href=\"https://code.facebook.com/codeofconduct\">Code of Conduct</a></h3>\n<p>Facebook has adopted a Code of Conduct that we expect project participants to adhere to. Please read <a href=\"https://code.facebook.com/codeofconduct\">the full text</a> so that you can understand what actions will and will not be tolerated.</p>\n<h3>Contributing Guide</h3>\n<p>Read our <a href=\"https://reactjs.org/contributing/how-to-contribute.html\">contributing guide</a> to learn about our development process, how to propose bugfixes and improvements, and how to build and test your changes to React.</p>\n<h3>Beginner Friendly Bugs</h3>\n<p>To help you get your feet wet and get you familiar with our contribution process, we have a list of <a href=\"https://github.com/facebook/react/labels/Difficulty%3A%20beginner\">beginner friendly bugs</a> that contain bugs which are fairly easy to fix. This is a great place to get started.</p>\n<h3>License</h3>\n<p>React is <a href=\"./LICENSE\">MIT licensed</a>.</p>\n"
+    },
+    {
+      "component": "footer",
+      "links": [
+        {
+          "href": "https://github.com/bueroalerta/react",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://github.com/bueroalerta",
+          "text": "bueroalerta"
+        }
+      ]
+    }
+  ]
+}
